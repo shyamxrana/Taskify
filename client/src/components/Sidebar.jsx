@@ -27,7 +27,7 @@ const Sidebar = ({ className, onClose }) => {
       )}
     >
       <div className="mb-8 text-center">
-        <h2 className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+        <h2 className="text-2xl font-bold bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
           Task Master
         </h2>
       </div>

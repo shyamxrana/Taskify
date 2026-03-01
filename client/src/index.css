@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -28,31 +28,43 @@
 
   .dark {
     --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --foreground: 265 20% 97%;
+    /* Tinted Purple-White */
+    --card: 240 10% 4.5%;
+    /* Slightly Lighter Card for Contrast */
+    --card-foreground: 265 20% 97%;
     --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
+    --popover-foreground: 265 20% 97%;
+    --primary: 265 100% 95%;
+    /* Light Purple Primary Text */
+    --primary-foreground: 265 60% 20%;
     --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary-foreground: 265 20% 97%;
     --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    --muted-foreground: 265 10% 70%;
+    /* Purple-Gray Muted Text */
+    --accent: 265 20% 15%;
+    /* Purple Accent Background */
+    --accent-foreground: 265 20% 97%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --destructive-foreground: 265 20% 97%;
+    --border: 265 10% 20%;
+    /* Purple-Tinted Border */
+    --input: 265 10% 20%;
+    --ring: 265 50% 60%;
+    /* Purple Ring */
   }
 }
- 
+
 @layer base {
   * {
     @apply border-border;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -64,18 +76,20 @@
     opacity: 0;
     transform: translateX(100px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
+
 .notification-enter {
   animation: slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Spinner */
 .spinner {
-  border: 3px solid rgba(255,255,255,0.1);
+  border: 3px solid rgba(255, 255, 255, 0.1);
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -84,6 +98,11 @@
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
